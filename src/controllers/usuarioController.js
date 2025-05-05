@@ -1,4 +1,4 @@
-const usuarioService = require('../services/usuarioService');
+const usuarioService = require('../src/services/usuarioService');
 
 async function cadastrarNovoUsuario(req, res) {
     const { nome, email, senha } = req.body;
