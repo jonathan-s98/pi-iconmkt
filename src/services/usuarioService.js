@@ -1,4 +1,4 @@
-const { sql, config } = require('../../config/db');
+const { sql, config } = require('../config/db');
 
 // Função para cadastrar um novo usuário no banco de dados
 async function cadastrarUsuario(nome, email, senha, id_nivel) {
