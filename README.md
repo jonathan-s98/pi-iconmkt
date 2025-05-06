@@ -27,19 +27,19 @@ As funcionalidades já implementadas incluem:
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Tela do aplicativo versão Web" src="./assets/web1.png" width="400px">
+  <img alt="Tela do aplicativo versão Web" src="./src/assets/web1.png" width="400px">
 
-  <img alt="Tela do aplicativo versão Web" src="./assets/web2.png" width="400px">
+  <img alt="Tela do aplicativo versão Web" src="./src/assets/web2.png" width="400px">
 </p>
 
 ### Mobile
 
 <p align="center">
-  <img alt="Tela do aplicativo versão mobile" src="./assets/mobile1.png" width="200px">
+  <img alt="Tela do aplicativo versão mobile" src="./src/assets/mobile1.png" width="200px">
 
-  <img alt="Tela do aplicativo versão mobile" src="./assets/mobile2.png" width="200px">
+  <img alt="Tela do aplicativo versão mobile" src="./src/assets/mobile2.png" width="200px">
 
-  <img alt="Tela do aplicativo versão mobile" src="./assets/mobile3.png" width="200px">
+  <img alt="Tela do aplicativo versão mobile" src="./src/assets/mobile3.png" width="200px">
 </p>
 
 ## 🚀 Como Executar
@@ -54,23 +54,23 @@ As funcionalidades já implementadas incluem:
 
 1. Clone o repositório:
 
-  <img src="./assets/1.png">
+  <img src="./src/assets/1.png">
 
 2. Acesse a pasta do projeto:
 
-  <img src="./assets/2.png">
+  <img src="./src/assets/2.png">
 
 3. Instale as dependências:
 
-  <img src="./assets/3.png">
+  <img src="./src/assets/3.png">
 
 4. Crie um arquivo .env com as variáveis de conexão com o banco:
 
-  <img src="./assets/4.png">
+  <img src="./src/assets/4.png">
 
 5. Inicie o servidor:
 
-  <img src="./assets/5.png">
+  <img src="./src/assets/5.png">
 
 6. Acesse em: http://localhost:3000
 
@@ -94,7 +94,7 @@ Indicadores de ROI e CPC por cliente (futuramente integráveis)
 
 📁 Estrutura de Pastas
 
-<img src="./assets/estrutura.png">
+<img src="./src/assets/estrutura.png">
 
 📌 Requisitos
 
