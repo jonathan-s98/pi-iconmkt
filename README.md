@@ -30,6 +30,8 @@ As funcionalidades já implementadas incluem:
   <img alt="Tela do aplicativo versão Web" src="./src/assets/web1.png" width="400px">
 
   <img alt="Tela do aplicativo versão Web" src="./src/assets/web2.png" width="400px">
+
+  <img alt="Tela do aplicativo versão Web" src="./src/assets/web3.png" width="400px">
 </p>
 
 ### Mobile
