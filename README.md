@@ -29,9 +29,9 @@ As funcionalidades já implementadas incluem:
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="Tela do aplicativo versão Web" src="./src/assets/web1.png" width="400px">
 
-  <img alt="Tela do aplicativo versão Web" src="./src/assets/web2.png" width="400px">
+  <img alt="Telas do aplicativo versão Web" src="./src/assets/web2.png" width="400px">
 
-  <img alt="Tela do aplicativo versão Web" src="./src/assets/web3.png" width="400px">
+  <img alt="Telas do aplicativo versão Web" src="./src/assets/web3.png" width="400px">
 </p>
 
 ### Mobile
