@@ -1,14 +1,14 @@
 const contratoService = require('../services/contratoService');
 
 async function cadastrarNovoContrato(req, res) {
-    const { nome_arquivo, caminho_arquivo, data_envio, status_contrato, data_inicio, data_termino } = req.body;
+    const { nome_arquivo, caminho_arquivo, data_envio, status_contrato, data_inicio, data_termino, id_cliente } = req.body;
 
-    if (!nome_arquivo || !caminho_arquivo || !data_envio || !status_contrato || !data_inicio || !data_termino) {
+    if (!nome_arquivo || !caminho_arquivo || !data_envio || !status_contrato || !data_inicio || !data_termino || !id_cliente) {
         return res.status(400).json({ mensagem: 'Preencha todos os campos' });
     }
 
     try {
-        const sucesso = await contratoService.cadastrarContrato(nome_arquivo, caminho_arquivo, data_envio, status_contrato, data_inicio, data_termino);
+        const sucesso = await contratoService.cadastrarContrato(nome_arquivo, caminho_arquivo, data_envio, status_contrato, data_inicio, data_termino, id_cliente);
 
         if (sucesso) {
             res.status(201).json({ mensagem: 'Contrato cadastrado com sucesso' });
@@ -43,9 +43,9 @@ async function getContratosExpirando(req, resposta) {
 }
 
 async function atualizarContrato(req, resposta) {
-    const { id, nome_arquivo, caminho_arquivo, data_envio, status_contrato, data_inicio, data_termino } = req.body;
+    const { id, nome_arquivo, caminho_arquivo, data_envio, status_contrato, data_inicio, data_termino, id_cliente } = req.body;
     try {
-        const atualizar = await contratoService.atualizarContrato(id, nome_arquivo, caminho_arquivo, data_envio, status_contrato, data_inicio, data_termino);
+        const atualizar = await contratoService.atualizarContrato(id, nome_arquivo, caminho_arquivo, data_envio, status_contrato, data_inicio, data_termino, id_cliente);
 
         if (atualizar) {
             resposta.json({ mensagem: 'Contrato atualizado com sucesso' });

@@ -1,14 +1,14 @@
 const usuarioService = require('../src/services/usuarioService');
 
 async function cadastrarNovoUsuario(req, res) {
-    const { nome, email, senha } = req.body;
+    const { nome_usuario, email, senha, id_nivel } = req.body;
 
-    if (!nome || !email || !senha) {
+    if (!nome_usuario || !email || !senha || !id_nivel) {
         return res.status(400).json({ mensagem: 'Preencha todos os campos' });
     }
 
     try {
-        const sucesso = await usuarioService.cadastrarUsuario(nome, email, senha);
+        const sucesso = await usuarioService.cadastrarUsuario(nome_usuario, email, senha, id_nivel);
 
         if (sucesso) {
             res.status(201).json({ mensagem: 'Usuário cadastrado com sucesso' });
@@ -59,9 +59,9 @@ async function getUsuarioPorNivel(req, resposta) {
 }
 
 async function atualizarUsuario(req, resposta) {
-    const { id, nome, email, senha } = req.body;
+    const { id, nome_usuario, email, senha, id_nivel } = req.body;
     try {
-        const atualizar = await usuarioService.atualizarUsuario(id, nome, email, senha);
+        const atualizar = await usuarioService.atualizarUsuario(id, nome_usuario, email, senha, id_nivel);
 
         if (atualizar) {
             resposta.json({ mensagem: 'Contrato atualizado com sucesso' });

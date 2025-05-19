@@ -43,7 +43,8 @@ async function atualizarContrato(id, nome_arquivo, caminho_arquivo, data_envio, 
             .input('status_contrato', sql.VarChar, status_contrato)
             .input('data_inicio', sql.Date, data_inicio)
             .input('data_termino', sql.Date, data_termino)
-            .query('UPDATE Contrato SET nome_arquivo = @nome_arquivo, caminho_arquivo = @caminho_arquivo, data_envio = @data_envio, status_contrato = @status_contrato, data_inicio = @data_inicio, data_termino = @data_termino WHERE id = @id');
+            .input('id_cliente', sql.Int, id_cliente)
+            .query('UPDATE Contrato SET nome_arquivo = @nome_arquivo, caminho_arquivo = @caminho_arquivo, data_envio = @data_envio, status_contrato = @status_contrato, data_inicio = @data_inicio, data_termino = @data_termino, id_cliente = @id_cliente WHERE id = @id');
 
         return resultado.rowsAffected[0];
     } catch (erro) {

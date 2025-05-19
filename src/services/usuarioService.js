@@ -4,11 +4,11 @@ const { sql, config } = require('../config/db');
 async function cadastrarUsuario(nome, email, senha, id_nivel) {
     const pool = await sql.connect(config);
     const resultado = await pool.request()
-        .input('nome', sql.VarChar, nome)
+        .input('nome_usuario', sql.VarChar, nome)
         .input('email', sql.VarChar, email)
         .input('senha', sql.VarChar, senha)
         .input('id_nivel', sql.Int, id_nivel)
-        .query(`INSERT INTO Usuario (nome, email, senha, id_nivel) VALUES (@nome, @email, @senha, @id_nivel)`);
+        .query(`INSERT INTO Usuario (nome_usuario, email, senha, id_nivel) VALUES (@nome_usuario, @email, @senha, @id_nivel)`);
     return resultado.rowsAffected[0] > 0;
 }
 
@@ -47,10 +47,10 @@ async function atualizarUsuario(id, nome, email, senha) {
         const requisicaoAcessoDB = await sql.connect(config);
         const resultado = await requisicaoAcessoDB.request()
             .input('id', sql.Int, id)
-            .input('nome', sql.VarChar, nome)
+            .input('nome_usuario', sql.VarChar, nome)
             .input('email', sql.VarChar, email)
             .input('senha', sql.VarChar, senha)
-            .query('UPDATE Usuario SET nome = @nome, email = @email, senha = @senha WHERE id = @id');
+            .query('UPDATE Usuario SET nome_usuario = @nome_usuario, email = @email, senha = @senha WHERE id = @id');
             
         return resultado.rowsAffected[0];
     } catch (erro) {

@@ -1,22 +1,22 @@
 const nivelService = require('../services/nivelService');
 
 async function cadastrarNovoNivel(req, res) {
-    const { nome_nivel, descricao } = req.body;
+    const { nome } = req.body;
 
-    if (!nome_nivel || !descricao) {
+    if (!nome) {
         return res.status(400).json({ mensagem: 'Preencha todos os campos' });
     }
 
     try {
-        const sucesso = await nivelService.cadastrarNivel(nome_nivel, descricao);
+        const sucesso = await nivelService.cadastrarNivel(nome);
 
         if (sucesso) {
-            res.status(201).json({ mensagem: 'Nível cadastrado com sucesso' });
+            res.status(201).json({ mensagem: 'Nível de acesso cadastrado com sucesso' });
         } else {
-            res.status(500).json({ mensagem: 'Não foi possível cadastrar o nível' });
+            res.status(500).json({ mensagem: 'Não foi possível cadastrar o nível de acesso' });
         }
     } catch (erro) {
-        console.error('Erro ao cadastrar nível:', erro);
+        console.error('Erro ao cadastrar nível de acesso:', erro);
         res.status(500).json({ mensagem: 'Erro interno no servidor' });
     }
 }
