@@ -34,16 +34,6 @@ As funcionalidades já implementadas incluem:
   <img alt="Telas do aplicativo versão Web" src="./src/assets/web3.png" width="400px">
 </p>
 
-### Mobile
-
-<p align="center">
-  <img alt="Tela do aplicativo versão mobile" src="./src/assets/mobile1.png" width="200px">
-
-  <img alt="Tela do aplicativo versão mobile" src="./src/assets/mobile2.png" width="200px">
-
-  <img alt="Tela do aplicativo versão mobile" src="./src/assets/mobile3.png" width="200px">
-</p>
-
 ## 🚀 Como Executar
 
 ### Pré-requisitos
